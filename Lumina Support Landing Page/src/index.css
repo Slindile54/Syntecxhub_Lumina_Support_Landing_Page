@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
+@import 'tailwindcss';
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #FFFFFF;
+  color: #2C1B41;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F5F0FA; }
+::-webkit-scrollbar-thumb { background: #C4AEDC; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7C5AA6; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float { animation: float 5s ease-in-out infinite; }
+.animate-pulse-soft { animation: pulse-soft 3s ease-in-out infinite; }
+.animate-fade-up { animation: fade-up 0.6s ease-out forwards; }
+
+.card-hover {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(124, 90, 166, 0.14);
+}
+
+.btn-primary {
+  background: #7C5AA6;
+  color: #fff;
+  border: 2px solid #7C5AA6;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.15s;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: #6B4A94;
+  border-color: #6B4A94;
+  box-shadow: 0 6px 20px rgba(124, 90, 166, 0.35);
+  transform: translateY(-1px);
+}
+.btn-primary:active {
+  background: #5A3A82;
+  border-color: #5A3A82;
+  transform: translateY(0);
+  box-shadow: none;
+}
+.btn-primary:disabled {
+  background: #C4AEDC;
+  border-color: #C4AEDC;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #7C5AA6;
+  border: 2px solid #7C5AA6;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.15s;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background: #F5F0FA;
+  box-shadow: 0 4px 14px rgba(124, 90, 166, 0.15);
+  transform: translateY(-1px);
+}
+.btn-secondary:active {
+  background: #EEE6F7;
+  transform: translateY(0);
+  box-shadow: none;
+}
+.btn-secondary:disabled {
+  color: #C4AEDC;
+  border-color: #C4AEDC;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.nav-link {
+  color: #2C1B41;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.18s;
+  text-decoration: none;
+}
+.nav-link:hover { color: #7C5AA6; }
